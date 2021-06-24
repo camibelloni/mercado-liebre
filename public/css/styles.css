@@ -205,6 +205,84 @@ main h2{
     width: 30px;
 }
 
+/*CREAR CUENTA*/
+.form-crear-cuenta{
+    padding: 50px 100px;
+
+}
+
+.form-crear-cuenta input{
+    display: block;
+    margin: 20px;
+    border-radius: 5px;
+    width: 60%;
+    height: 25px;
+    border: solid 1px #666;
+    font-size: 12px;
+    padding-left: 5px;
+    
+}
+
+.form-crear-cuenta label{
+    margin: 20px;
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+.perfil-usuario{
+    align-items: center;
+}
+
+.enviar-registro {
+    margin: 20px;
+    width: 60%;
+    height: 25px;
+    background-color: #1259c3;
+    color: white;
+    border-radius: 5px;
+    border: none;
+
+}
+
+.limpiar-registro {
+    margin: 20px;
+    width: 60%;
+    height: 25px;
+    background-color: #1259c3;
+    color: white;
+    border-radius: 5px;
+    border: none;
+
+}
+/*LOGIN*/
+
+.login-form {
+    padding-top: 250px;
+    padding-bottom: 50px;
+    padding-left: 35%;
+
+}
+
+.login-form input {
+    display: block;
+    margin: 20px;
+    border-radius: 5px;
+    width: 60%;
+    height: 25px;
+    border: solid 1px #666;
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+.login-button{
+    margin: 20px;
+    width: 60%;
+    height: 25px;
+    background-color: #1259c3;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
 @media (min-width: 361px) {
 
 .descriptions{
