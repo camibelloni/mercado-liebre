@@ -50,6 +50,10 @@ body {
     color: black;
 }
 
+.negrita{
+    font-weight: bold;
+}
+
 footer {
     text-align: center;
     justify-content: center;
