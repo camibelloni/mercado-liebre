@@ -22,12 +22,12 @@ app.get('/ayuda', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/ayuda.html'));
 })
 
-app.get('/crear-cuenta', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/crear-cuenta.html'));
+app.get('/register', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/register.html'));
 })
 
-app.get('/ingresa', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/ingresa.html'));
+app.get('/ingresar', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/ingresar.html'));
 })
 
 app.get('/mis-compras', (req, res) => {
@@ -41,3 +41,5 @@ app.get('/tiendas-oficiales', (req, res) => {
 app.get('/vender', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/vender.html'));
 })
+
+

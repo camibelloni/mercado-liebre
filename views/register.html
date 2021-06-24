@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Registrate!</title>
+</head>
+<body>
+    <form action="/register" method="POST">
+        <input type="text" name="nombre-apellido" id="nombre-apellido" placeholder="Nombre y apellido">
+        <input type="text" name="nombre-usuario" id="usuario" placeholder="Nombre de Usuario">
+        <input type="email" name="email" id="email" placeholder="E-mail">
+        <label>Fecha de nacimiento</label>
+        <input type="date" name="fecha-nacimiento" value="2021/01/01">
+        <input type="text" name="direccion" id="direccion" placeholder="Dirección">
+
+        <label>Perfil de usuario</label>
+        <input type="radio" name="perfil-usuario-comprador" value="comprador">Comprador
+        <input type="radio" name="perfil-usuario-comprador" value="vendedor">Vendedor
+
+        <label>Intereses</label>
+        <input type="checkbox" name="interes-electro" value="electro">Electro
+        <input type="checkbox" name="interes-moda" value="moda">Moda
+        <input type="checkbox" name="interes-hogar" value="hogar">Hogar
+        <input type="checkbox" name="interes-jugueteria" value="jugueteria">Jugueteria
+        <input type="checkbox" name="interes-vida-sana" value="vida-sana">Vida sana
+
+        <div>
+            <input type="text" name="foto-perfil" id="foto-perfil" placeholder="Seleccione una imagen">
+            <button><a href="D:\Datos">Agregar</a></button>
+        </div>
+        
+
+
+        <input type="password" name="password" id="password" placeholder="Contraseña">
+        <input type="password" name="repassword" id="repassword" placeholder="Confirmar contraseña">
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpiar</button>
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+    </form>
+</body>
+</html>
