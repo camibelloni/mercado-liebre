@@ -69,9 +69,7 @@ main {
 }
 
 .banner{
-    display: flex;
     width: 100%;
-
 }
 
 .product-article{
@@ -330,6 +328,9 @@ main h2{
 }
 .product-article:hover {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+.banner {
+    width: 100%;
 }
 
 }
