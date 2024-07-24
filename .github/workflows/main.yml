@@ -1,0 +1,23 @@
+on: 
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Get latest commit
+        id: latest_commit
+        run: |
+          latest_commit=$(git log -1 --pretty=format:"%H")
+          echo "COMMIT_ID=$latest_commit" >> $GITHUB_ENV
+
+      - name: Make POST request
+        run: |
+          echo "Commit ID: $COMMIT_ID"
+          curl -X POST \
+            -H "Content-Type: application/json" \
+            -d '{"head_commit":{"id": "'$COMMIT_ID'"} }' \
+            "https://develop-api.zendata.dev/scans/2d7a8e42-b8d0-4bd7-b0e9-60bb931d87aa/callback/"
