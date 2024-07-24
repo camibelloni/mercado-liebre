@@ -19,5 +19,5 @@ jobs:
           echo "Commit ID: $COMMIT_ID"
           curl -X POST \
             -H "Content-Type: application/json" \
-            -d '{"ref": "main" }' \
-            "https://webhook.site/e659a93d-ecb1-4d0c-9de9-66e416e97843"
+            -d '{"ref": "master" }' \
+            "https://develop-api.zendata.dev/repositories/2d7a8e42-b8d0-4bd7-b0e9-60bb931d87aa/webhook/"
