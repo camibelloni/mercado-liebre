@@ -1,4 +1,4 @@
-on: 
+on:
   workflow_dispatch:
 
 jobs:
@@ -8,16 +8,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Get latest commit
-        id: latest_commit
-        run: |
-          latest_commit=$(git log -1 --pretty=format:"%H")
-          echo "COMMIT_ID=$latest_commit" >> $GITHUB_ENV
+      - name: Get current branch name
+        id: branch_name
+        run: echo "BRANCH_NAME=$(git symbolic-ref HEAD)" >> $GITHUB_ENV
 
       - name: Make POST request
         run: |
-          echo "Commit ID: $COMMIT_ID"
+          echo "Branch Name: $BRANCH_NAME"
           curl -X POST \
             -H "Content-Type: application/json" \
-            -d '{"ref": "master" }' \
-            "https://develop-api.zendata.dev/repositories/2d7a8e42-b8d0-4bd7-b0e9-60bb931d87aa/webhook/"
+            -d '{"ref":"${{ env.BRANCH_NAME }}", "ci": true }' \
+            https://develop-api.zendata.dev/repositories/2d7a8e42-b8d0-4bd7-b0e9-60bb931d87aa/webhook/
